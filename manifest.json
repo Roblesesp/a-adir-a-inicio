@@ -1,7 +1,7 @@
 {
   "name": "Mi Página Web",
   "short_name": "Mi Web",
-  "start_url": "incio-compartir.html",
+  "start_url": "index.html",
   "display": "standalone",
   "icons": [
     {
