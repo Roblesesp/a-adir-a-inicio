@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi Página Web</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Bienvenido a Mi Página Web</h1>
+    <p>Contenido de tu página web...</p>
+    
+    <button id="boton-instalar" >Añadir a la pantalla de inicio</button>
+
+    <script>
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault(); // Prevenir que se muestre automáticamente el mensaje de instalación
+
+            const botonInstalar = document.getElementById('boton-instalar');
+
+            botonInstalar.style.display = 'block'; // Mostrar el botón de instalación
+            botonInstalar.addEventListener('click', () => {
+                botonInstalar.style.display = 'none'; // Ocultar el botón después de hacer clic
+
+                // Mostrar el mensaje de instalación
+                e.prompt();
+
+                // Esperar a que el usuario responda a la instalación
+                e.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('El usuario aceptó instalar la PWA.');
+                    } else {
+                        console.log('El usuario canceló la instalación.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

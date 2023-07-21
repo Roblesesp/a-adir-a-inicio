@@ -1,0 +1,20 @@
+{
+  "name": "Mi Página Web",
+  "short_name": "Mi Web",
+  "start_url": "incio-compartir.html",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "icono-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icono-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff"
+}
