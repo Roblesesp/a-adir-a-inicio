@@ -1,7 +1,7 @@
 {
   "name": "Mi Página Web",
   "short_name": "Mi Web",
-  "start_url": "https://roblesesp.github.io/a-adir-a-inicio/",
+  "start_url": "./index.html",
   "display": "standalone",
   "icons": [
     {
